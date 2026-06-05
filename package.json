@@ -1,6 +1,6 @@
 {
   "name": "free-alerts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Librería de alertas, toasts y confirmaciones para JavaScript.",
   "keywords": [
     "toast",
@@ -16,18 +16,19 @@
     "type": "git",
     "url": "git+https://github.com/alobuuls/free-alerts.git"
   },
-  "homepage": "https://alobuuls.github.io/free-alerts/demo/index.html",
+  "homepage": "https://alobuuls.github.io/free-alerts/demo/prod/",
   "bugs": {
     "url": "https://github.com/alobuuls/free-alerts/issues"
   },
-  "main": "dist/free-alerts.umd.js",
-  "module": "dist/free-alerts.mjs",
-  "style": "dist/free-alerts.css",
+  "main": "./dist/free-alerts.umd.js",
+  "module": "./dist/free-alerts.mjs",
+  "style": "./dist/free-alerts.css",
   "exports": {
     ".": {
       "import": "./dist/free-alerts.mjs",
       "require": "./dist/free-alerts.umd.js"
-    }
+    },
+    "./style": "./dist/free-alerts.css"
   },
   "files": [
     "dist"
