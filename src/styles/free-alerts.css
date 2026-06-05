@@ -40,6 +40,7 @@
   inset: 0;
   justify-content: center;
   position: fixed;
+  z-index: 5;
 }
 
 .free-alerts-modal {

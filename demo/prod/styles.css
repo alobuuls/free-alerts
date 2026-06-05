@@ -1,0 +1,121 @@
+/* Reset y box-sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: 0;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #111111;
+}
+
+/* Fondo sutil detrás del ul */
+ul:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -50%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Contenedor de botones */
+ul {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  margin-inline: auto;
+  width: 240px;
+  padding: 20px 0;
+  border: 3px solid #000;
+  border-radius: 10px;
+  background-image: linear-gradient(0deg, #000, #0c0c0c);
+  overflow: hidden;
+}
+
+/* Items */
+ul li {
+  position: relative;
+  list-style: none;
+  margin: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Botón invisible que captura clicks */
+ul li button {
+  position: absolute;
+  inset: 0; /* top/right/bottom/left = 0 */
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Caja del icono */
+ul li .icon-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 3px solid #000;
+  border-radius: 10px;
+  background-color: #101010;
+  transition:
+    background-color 0.5s ease,
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* Iconos dentro del box */
+ul li .icon-box .fa {
+  font-size: 30px;
+  color: #222;
+  transition:
+    color 0.5s ease,
+    text-shadow 0.5s ease;
+}
+
+/* Hover en li (aplica a icon-box e icono) */
+ul li:hover .icon-box {
+  background-color: #000;
+  border-color: #fff;
+  box-shadow:
+    0 0 10px rgba(33, 156, 243, 0.5),
+    0 0 20px rgba(33, 156, 243, 0.5),
+    0 0 30px rgba(33, 156, 243, 0.5),
+    0 0 10px #219cf3 inset;
+}
+
+ul li:hover .icon-box .fa {
+  color: #fff;
+  text-shadow:
+    0 0 10px #219cf3,
+    0 0 10px #219cf3;
+}
+
+#result {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+}

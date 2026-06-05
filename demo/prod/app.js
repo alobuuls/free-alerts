@@ -1,4 +1,4 @@
-import FreeAlerts from '../src/index.js';
+import FreeAlerts from '../../dist/free-alerts.mjs';
 
 // Selector rápido
 const $ = el => document.getElementById(el);
@@ -17,37 +17,27 @@ const ALERT_TYPES = {
   info: () => FreeAlerts.info('Alerta info'),
   warning: () => FreeAlerts.warning('Alerta warning'),
   error: () => FreeAlerts.error('Alerta error'),
+
   alert: () =>
     FreeAlerts.alert({
       title: 'Atención',
       message: 'Este es un mensaje de alerta',
     }),
+
   confirm: async () => {
-    try {
-      const result = await FreeAlerts.confirm({
-        title: 'Eliminar',
-        message: '¿Deseas eliminar este registro?',
-      });
+    const result = await FreeAlerts.confirm({
+      title: 'Eliminar',
+      message: '¿Deseas eliminar este registro?',
+    });
 
-      console.log('Confirm result:', result);
-
-      if (DOM_EL.result) {
-        DOM_EL.result.textContent = `Confirm result: ${result}`;
-      }
-    } catch (err) {
-      console.error('Confirm error:', err);
-    }
+    DOM_EL.result.textContent = `Confirm result: ${result}`;
   },
 };
 
-// Events
 DOM_EL.container.ctnBtns?.addEventListener('click', e => {
-  const li = e.target.closest('li');
-  if (!li) return;
+  const btn = e.target.closest('button');
 
-  const btn = li.querySelector('button');
   if (!btn) return;
 
-  const action = ALERT_TYPES[btn.id];
-  action?.();
+  ALERT_TYPES[btn.id]?.();
 });

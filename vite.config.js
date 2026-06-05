@@ -2,19 +2,16 @@ import { defineConfig } from 'vite';
 import path from 'path';
 
 export default defineConfig({
-  // 👇 Solo afecta al modo dev (demo)
-  root: 'demo',
+  root: 'demo/dev',
 
-  // 👇 Alias para imports limpios
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
   },
 
-  // 👇 Build de la librería (npm / dist)
   build: {
-    outDir: '../dist',
+    outDir: path.resolve(__dirname, 'dist'),
     emptyOutDir: true,
 
     lib: {
@@ -24,7 +21,6 @@ export default defineConfig({
       formats: ['es', 'umd'],
     },
 
-    // 👇 evita problemas con CSS en librerías UI
     cssCodeSplit: false,
   },
 });
