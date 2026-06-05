@@ -8,9 +8,6 @@ import { confirm } from './core/confirm.js';
 
 // API principal de la librería
 const FreeAlerts = {
-  // Base
-  toast,
-
   // Shortcuts
   success(message, options = {}) {
     return toast(message, { ...options, type: 'success' });
