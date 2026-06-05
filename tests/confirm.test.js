@@ -1,5 +1,9 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, afterEach } from 'vitest';
 import FreeAlerts from '../src/index.js';
+
+afterEach(() => {
+  document.body.innerHTML = '';
+});
 
 describe('FreeAlerts.confirm', () => {
   it('debe resolver true al confirmar', async () => {
@@ -8,10 +12,12 @@ describe('FreeAlerts.confirm', () => {
       message: '¿Seguro?',
     });
 
-    document.querySelector('.confirm').dispatchEvent(new Event('click'));
+    const modal = document.querySelector('.free-alerts-modal');
+    expect(modal).not.toBeNull();
+
+    document.querySelector('.confirm').click();
 
     const result = await promise;
-
     expect(result).toBe(true);
   });
 
@@ -21,10 +27,12 @@ describe('FreeAlerts.confirm', () => {
       message: '¿Seguro?',
     });
 
-    document.querySelector('.cancel').dispatchEvent(new Event('click'));
+    const modal = document.querySelector('.free-alerts-modal');
+    expect(modal).not.toBeNull();
+
+    document.querySelector('.cancel').click();
 
     const result = await promise;
-
     expect(result).toBe(false);
   });
 });
