@@ -1,584 +1,540 @@
-# 📘 FREEALERTS — LIBRERÍA DE ALERTAS, TOASTS Y CONFIRMACIONES
+# 🔔 free-alerts
+
+<p align="center">
+  <img src="src/assets/preview.png" width="450" title="free-alerts" alt="free-alerts" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=000&style=flat" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Vite-Build-646CFF?logo=vite&logoColor=white&style=flat" alt="Vite" />
+  <img src="https://img.shields.io/badge/CSS3-Styled-blue?logo=css3&logoColor=white&style=flat" alt="CSS3" />
+  <img src="https://img.shields.io/badge/Zero-Dependencies-success?style=flat" alt="Zero Dependencies" />
+  <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=flat" alt="Status Completed" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/alobuuls/free-alerts" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Repository-black?logo=github" alt="Github Repository"/>
+  </a>
+  <a href="https://www.npmjs.com/package/free-alerts" target="_blank">
+    <img src="https://img.shields.io/badge/NPM-Package-CB3837?logo=npm&logoColor=white" alt="NPM Package"/>
+  </a>
+  <a href="https://github.com/alobuuls/free-alerts/stargazers" target="_blank">
+    <img src="https://img.shields.io/github/stars/alobuuls/free-alerts?style=social" alt="Github Stars"/>
+  </a>
+  <a href="https://github.com/alobuuls/free-alerts/commits/main" target="_blank">
+    <img src="https://img.shields.io/github/last-commit/alobuuls/free-alerts" alt="Last Commit" />
+  </a>
+</p>
+
+---
+
+## 📑 Table of Contents
+
+- [🔔 free-alerts](#-free-alerts)
+  - [📑 Table of Contents](#-table-of-contents)
+  - [🌐 Links](#-links)
+    - [🚀 Demo](#-demo)
+    - [📦 NPM Package](#-npm-package)
+    - [💻 Repository](#-repository)
+  - [📖 Description](#-description)
+  - [✨ Features](#-features)
+  - [⚙️ System Requirements](#️-system-requirements)
+  - [🚀 Installation](#-installation)
+    - [Install from NPM](#install-from-npm)
+  - [▶️ Quick Start](#️-quick-start)
+  - [🌍 CDN Usage](#-cdn-usage)
+    - [CSS](#css)
+    - [JavaScript](#javascript)
+    - [Example](#example)
+  - [📚 API Reference](#-api-reference)
+- [🔔 Toast Methods](#-toast-methods)
+  - [Parameters](#parameters)
+  - [Success](#success)
+  - [Error](#error)
+  - [Warning](#warning)
+  - [Info](#info)
+  - [Custom Duration](#custom-duration)
+- [📢 Alert Method](#-alert-method)
+  - [Parameters](#parameters-1)
+  - [Example](#example-1)
+- [❓ Confirm Method](#-confirm-method)
+  - [Parameters](#parameters-2)
+  - [Return Type](#return-type)
+  - [Example](#example-2)
+  - [💡 Usage Examples](#-usage-examples)
+    - [Form Submission](#form-submission)
+    - [Error Handling](#error-handling)
+    - [Delete Confirmation](#delete-confirmation)
+  - [⚛️ React Example](#️-react-example)
+  - [🅰️ Angular Example](#️-angular-example)
+  - [💚 Vue Example](#-vue-example)
+  - [🧪 Testing](#-testing)
+    - [Run Tests](#run-tests)
+    - [Example Test](#example-test)
+  - [📁 Project Structure](#-project-structure)
+  - [🔥 Best Practices](#-best-practices)
+  - [🤝 Contributing](#-contributing)
+    - [Clone Repository](#clone-repository)
+    - [Install Dependencies](#install-dependencies)
+    - [Start Development Mode](#start-development-mode)
+    - [Run Tests](#run-tests-1)
+    - [Build Package](#build-package)
+  - [📄 License](#-license)
+
+---
+
+## 🌐 Links
+
+### 🚀 Demo
+
+https://alobuuls.github.io/free-alerts/demo/prod/
+
+### 📦 NPM Package
+
+https://www.npmjs.com/package/free-alerts
+
+### 💻 Repository
+
+https://github.com/alobuuls/free-alerts
+
+---
+
+## 📖 Description
 
 > [!NOTE]
-> FreeAlerts es una librería ligera de JavaScript para mostrar notificaciones modernas en aplicaciones web.
+> free-alerts is a lightweight JavaScript library designed to display modern notifications, alerts, and confirmation dialogs with a simple and intuitive API.
 
-> [!IMPORTANT]
-> Permite mostrar:
->
-> ✔ Toasts
->
-> ✔ Alertas
->
-> ✔ Confirmaciones
+The library was created to provide a clean user experience without external dependencies, making it easy to integrate into any JavaScript application or framework.
 
 ---
 
-## 🎯 Objetivo
+## ✨ Features
 
-Mejorar la experiencia de usuario (UX) con una API simple y sin dependencias.
-
----
-
-# 📘 🟢 ¿QUÉ ES FREEALERTS?
-
-> [!NOTE]
-> Es una librería UI de notificaciones.
-
-## 👉 Características principales
-
-✔ Zero dependencies
-
-✔ Ligera
-
-✔ Fácil de usar
-
-✔ Compatible con cualquier framework
-
-✔ Personalizable mediante CSS
-
-✔ API intuitiva
+- 🔔 Toast notifications
+- ✅ Success notifications
+- ❌ Error notifications
+- ⚠️ Warning notifications
+- ℹ️ Info notifications
+- 📢 Alert dialogs
+- ❓ Confirmation dialogs
+- 🚀 Zero dependencies
+- 🎨 Customizable through CSS
+- 📦 Framework agnostic
+- ⚡ Lightweight and fast
+- 🧪 Tested with Vitest
+- 🌍 Browser compatible
+- 🔧 Easy integration
 
 ---
 
-### 💡 Compatible con
+## ⚙️ System Requirements
 
-* Vanilla JavaScript
-* React
-* Vue
-* Angular
+Before using the library, make sure you have:
 
-> [!TIP]
-> Al no depender de ningún framework, puede integrarse fácilmente en proyectos nuevos o existentes.
+- 🌐 Modern browser
+- 📦 Node.js (for package installation)
+- 📦 npm
 
 ---
 
-# 📘 🔵 ¿POR QUÉ USAR FREEALERTS?
+## 🚀 Installation
 
-## 🎯 Beneficios
-
-✔ Ligera y rápida
-
-✔ Sin dependencias externas
-
-✔ Mejora la UX
-
-✔ Fácil integración
-
-✔ Personalización sencilla
-
-✔ API amigable para desarrolladores
-
-👉 Ideal para proyectos pequeños y medianos.
-
----
-
-# 📘 🟣 INSTALACIÓN
-
-### 💡 NPM
+### Install from NPM
 
 ```bash
 npm install free-alerts
 ```
 
-👉 Instala la librería en tu proyecto.
-
 ---
 
-# 📘 🟡 IMPORTACIÓN
-
-## 🧠 ES Modules (recomendado)
+## ▶️ Quick Start
 
 ```js
 import FreeAlerts from 'free-alerts';
-```
+import 'free-alerts/style';
 
-### 💡 Ejemplo
-
-```js
-FreeAlerts.success('¡Operación exitosa!');
+FreeAlerts.success('Operation completed successfully');
 ```
 
 ---
 
-# 📘 🟠 USO EN NAVEGADOR
+## 🌍 CDN Usage
 
-> [!NOTE]
-> Puede utilizarse sin Vite, Webpack o bundlers.
-
-### 💡 CSS
+### CSS
 
 ```html
-<link rel="stylesheet" href="free-alerts.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/free-alerts@1.0.0/dist/free-alerts.css" />
 ```
 
-### 💡 JavaScript
+### JavaScript
 
 ```html
-<script src="free-alerts.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/free-alerts@1.0.0/dist/free-alerts.umd.js"></script>
 ```
 
-### 💡 Uso
-
-```js
-FreeAlerts.info('Bienvenido al sitio!');
-```
-
----
-
-# 📘 🔴 TOASTS 🔔
-
-> [!NOTE]
-> Notificaciones temporales.
-
-👉 Aparecen unos segundos y desaparecen automáticamente.
-
-### 💡 Toast básico
-
-```js
-FreeAlerts.toast('Mensaje rápido');
-```
-
-👉 Perfecto para feedback rápido.
-
----
-
-# 📘 ⚫ TIPOS DE TOAST
-
-## ✔ Success
-
-```js
-FreeAlerts.success('Guardado correctamente');
-```
-
-👉 Operaciones exitosas.
-
----
-
-## ✔ Error
-
-```js
-FreeAlerts.error('Ha ocurrido un error');
-```
-
-👉 Fallos o excepciones.
-
----
-
-## ✔ Warning
-
-```js
-FreeAlerts.warning('Cuidado con esta acción');
-```
-
-👉 Advertencias.
-
----
-
-## ✔ Info
-
-```js
-FreeAlerts.info('Nueva actualización disponible');
-```
-
-👉 Información general.
-
-> [!TIP]
-> Utiliza el tipo adecuado de notificación para que el usuario identifique rápidamente el contexto del mensaje.
-
----
-
-# 📘 ⚪ ALERT
-
-> [!NOTE]
-> Modal informativo.
-
-👉 Muestra información importante al usuario.
-
-### 💡 Ejemplo
-
-```js
-FreeAlerts.alert({
-  title: 'Atención',
-  message: 'Esta acción no se puede deshacer'
-});
-```
-
-👉 No requiere confirmación.
-
----
-
-# 📘 🟤 CONFIRM
-
-> [!NOTE]
-> Modal de confirmación.
-
-👉 Solicita una decisión al usuario.
-
-### 💡 Ejemplo
-
-```js
-const confirmed = await FreeAlerts.confirm({
-  title: 'Eliminar registro',
-  message: '¿Estás seguro?'
-});
-```
-
-### 👉 Retorna
-
-```ts
-Promise<boolean>
-```
-
-✔ `true` → acepta
-
-✔ `false` → cancela
-
----
-
-### 👉 Muy usado antes de
-
-* Eliminar registros
-* Cerrar sesión
-* Operaciones críticas
-
-> [!IMPORTANT]
-> `confirm()` devuelve una Promise que debe resolverse antes de continuar con la operación.
-
----
-
-# 📘 🟢 API PRINCIPAL
-
-## 🧠 Métodos disponibles
-
-| Método             | Descripción            |
-| ------------------ | ---------------------- |
-| `toast(message)`   | Toast temporal         |
-| `success(message)` | Mensaje de éxito       |
-| `error(message)`   | Mensaje de error       |
-| `warning(message)` | Mensaje de advertencia |
-| `info(message)`    | Mensaje informativo    |
-| `alert(options)`   | Modal informativo      |
-| `confirm(options)` | Modal de confirmación  |
-
----
-
-# 📘 🔵 FLUJO MENTAL
-
-## 🧠 ¿Qué quiero mostrar?
-
-### 👉 Mensaje temporal
-
-```js
-toast()
-```
-
----
-
-### 👉 Información importante
-
-```js
-alert()
-```
-
----
-
-### 👉 Decisión del usuario
-
-```js
-confirm()
-```
-
----
-
-> [!TIP]
-> Elegir correctamente entre Toast, Alert y Confirm mejora significativamente la experiencia de usuario.
-
----
-
-# 📘 🟣 PERSONALIZACIÓN
-
-> [!NOTE]
-> Toda la apariencia puede modificarse con CSS.
-
-### 💡 Ejemplo
-
-```css
-.free-alerts-toast {
-  background: #111;
-  color: #fff;
-  border-radius: 10px;
-  padding: 12px 16px;
-  font-family: Arial, sans-serif;
-}
-```
-
-👉 Permite adaptar la librería al diseño de tu proyecto.
-
----
-
-# 📘 🟡 USO EN REACT
-
-### 💡 Ejemplo
-
-```jsx
-import FreeAlerts from 'free-alerts';
-
-function App() {
-
-  const handleClick = () => {
-    FreeAlerts.success('Guardado desde React!');
-  };
-
-  return (
-    <button onClick={handleClick}>
-      Click Me
-    </button>
-  );
-}
-```
-
----
-
-# 📘 🟠 USO EN VUE 3
-
-### 💡 Ejemplo
-
-```vue
-<template>
-  <button @click="showAlert">
-    Mostrar Toast
-  </button>
-</template>
-
-<script setup>
-
-import FreeAlerts from 'free-alerts';
-
-function showAlert() {
-  FreeAlerts.info('Mensaje desde Vue 3');
-}
-
+### Example
+
+```html
+<button id="success">Show Toast</button>
+
+<script>
+  document.getElementById('success').addEventListener('click', () => {
+    FreeAlerts.success('Hello World!');
+  });
 </script>
 ```
 
 ---
 
-# 📘 🔴 USO EN ANGULAR
+## 📚 API Reference
 
-### 💡 Ejemplo
+| Method                      | Description              |
+| --------------------------- | ------------------------ |
+| `success(message, options)` | Success notification     |
+| `error(message, options)`   | Error notification       |
+| `warning(message, options)` | Warning notification     |
+| `info(message, options)`    | Information notification |
+| `alert(options)`            | Informational modal      |
+| `confirm(options)`          | Confirmation modal       |
+
+---
+
+# 🔔 Toast Methods
+
+The following methods display temporary notifications:
+
+```js
+FreeAlerts.success();
+FreeAlerts.error();
+FreeAlerts.warning();
+FreeAlerts.info();
+```
+
+---
+
+### Parameters
 
 ```ts
-import FreeAlerts from 'free-alerts';
+message: string
 
-export class AppComponent {
-
-  notify() {
-    FreeAlerts.success(
-      'Guardado desde Angular!'
-    );
-  }
-
+options?: {
+  duration?: number
 }
 ```
 
-👉 Puede utilizarse igual que cualquier librería JavaScript.
-
 ---
 
-# 📘 ⚫ CASOS DE USO
+### Success
 
-✔ Notificaciones de éxito
-
-✔ Mensajes de error
-
-✔ Confirmaciones
-
-✔ Feedback visual
-
-✔ Formularios
-
-✔ CRUDs
-
-✔ Dashboards
-
-✔ Paneles administrativos
-
----
-
-# 📘 ⚪ BUILD
-
-> [!NOTE]
-> Generar compilación de producción.
-
-### 💡 Comando
-
-```bash
-npm run build
-```
-
-### 👉 Archivos generados
-
-```text
-dist/
-├── free-alerts.es.js
-├── free-alerts.umd.js
-└── free-alerts.css
+```js
+FreeAlerts.success('User created successfully');
 ```
 
 ---
 
-# 📘 🟤 TESTING
+### Error
 
-> [!NOTE]
-> Ejecutar pruebas.
+```js
+FreeAlerts.error('Unexpected error occurred');
+```
 
-### 💡 Tests
+---
+
+### Warning
+
+```js
+FreeAlerts.warning('Please complete all fields');
+```
+
+---
+
+### Info
+
+```js
+FreeAlerts.info('New version available');
+```
+
+---
+
+### Custom Duration
+
+```js
+FreeAlerts.success('Saved correctly', {
+  duration: 5000,
+});
+```
+
+---
+
+# 📢 Alert Method
+
+Displays an informational modal dialog.
+
+### Parameters
+
+```ts
+{
+  title?: string;
+  message?: string;
+}
+```
+
+---
+
+### Example
+
+```js
+FreeAlerts.alert({
+  title: 'Attention',
+  message: 'This action cannot be undone.',
+});
+```
+
+---
+
+# ❓ Confirm Method
+
+Displays a confirmation dialog and returns a Promise.
+
+### Parameters
+
+```ts
+{
+  title?: string;
+  message?: string;
+}
+```
+
+---
+
+### Return Type
+
+```ts
+Promise<boolean>;
+```
+
+---
+
+### Example
+
+```js
+const confirmed = await FreeAlerts.confirm({
+  title: 'Delete User',
+  message: 'Are you sure you want to continue?',
+});
+
+if (confirmed) {
+  console.log('Confirmed');
+}
+```
+
+---
+
+## 💡 Usage Examples
+
+### Form Submission
+
+```js
+form.addEventListener('submit', () => {
+  FreeAlerts.success('Form submitted successfully');
+});
+```
+
+---
+
+### Error Handling
+
+```js
+try {
+  await saveData();
+} catch {
+  FreeAlerts.error('Failed to save data');
+}
+```
+
+---
+
+### Delete Confirmation
+
+```js
+const confirmed = await FreeAlerts.confirm({
+  title: 'Delete Record',
+  message: 'This action cannot be undone.',
+});
+
+if (confirmed) {
+  deleteRecord();
+}
+```
+
+---
+
+## ⚛️ React Example
+
+```jsx
+import FreeAlerts from 'free-alerts';
+import 'free-alerts/style';
+
+function App() {
+  const handleClick = () => {
+    FreeAlerts.success('Saved from React');
+  };
+
+  return <button onClick={handleClick}>Save</button>;
+}
+
+export default App;
+```
+
+---
+
+## 🅰️ Angular Example
+
+```ts
+import FreeAlerts from 'free-alerts';
+import 'free-alerts/style';
+
+@Component({
+  selector: 'app-root',
+  template: ` <button (click)="notify()">Notify</button> `,
+})
+export class AppComponent {
+  notify() {
+    FreeAlerts.success('Saved from Angular');
+  }
+}
+```
+
+---
+
+## 💚 Vue Example
+
+```vue
+<template>
+  <button @click="notify">Notify</button>
+</template>
+
+<script setup>
+import FreeAlerts from 'free-alerts';
+import 'free-alerts/style';
+
+function notify() {
+  FreeAlerts.success('Saved from Vue');
+}
+</script>
+```
+
+---
+
+## 🧪 Testing
+
+The library includes unit tests using Vitest.
+
+### Run Tests
 
 ```bash
 npm run test
 ```
 
-### 💡 UI de Vitest
+---
 
-```bash
-npm run test:ui
+### Example Test
+
+```js
+import { describe, it, expect } from 'vitest';
+import FreeAlerts from '../src/index.js';
+
+describe('FreeAlerts.alert', () => {
+  it('should create modal', () => {
+    FreeAlerts.alert({
+      title: 'Error',
+      message: 'Something happened',
+    });
+
+    const modal = document.querySelector('.free-alerts-modal');
+
+    expect(modal).not.toBeNull();
+  });
+});
 ```
 
 ---
 
-# 📘 🟢 DESARROLLO
+## 📁 Project Structure
 
-### 💡 Instalar dependencias
+```text
+free-alerts/
+├── src/
+│   ├── core/
+│   │   ├── alert.js
+│   │   ├── confirm.js
+│   │   ├── createElement.js
+│   │   └── toast.js
+│   ├── styles/
+│   │   └── free-alerts.css
+│   ├── utils/
+│   │   ├── constants.js
+│   │   └── icons.js
+│   └── index.js
+├── tests/
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## 🔥 Best Practices
+
+- Use success notifications for successful operations
+- Use error notifications for failures
+- Use confirm dialogs before destructive actions
+- Keep messages concise and meaningful
+- Avoid excessive notifications
+- Maintain consistent user feedback
+- Provide clear action outcomes
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+### Clone Repository
+
+```bash
+git clone git@github.com:alobuuls/free-alerts.git
+```
+
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 💡 Levantar entorno local
+### Start Development Mode
 
 ```bash
 npm run dev
 ```
 
----
+### Run Tests
 
-# 📘 🔵 ROADMAP
+```bash
+npm run test
+```
 
-## 🚀 Funcionalidades futuras
+### Build Package
 
-✔ Dark Mode
+```bash
+npm run build
+```
 
-✔ Posicionamiento de toasts
-
-✔ Barra de progreso
-
-✔ Animaciones avanzadas
-
-✔ Soporte TypeScript
-
-✔ Sistema de plugins
+If you find bugs, have ideas for improvements, or want to contribute new features, feel free to open an issue or submit a pull request.
 
 ---
 
-# 📘 🟣 TIPOS DE NOTIFICACIÓN
+## 📄 License
 
-## 🧠 Comparación rápida
-
-| Tipo    | Uso                       |
-| ------- | ------------------------- |
-| Toast   | 👉 Mensaje temporal       |
-| Alert   | 👉 Información importante |
-| Confirm | 👉 Requiere decisión      |
-
----
-
-# 📘 🟡 BUENAS PRÁCTICAS
-
-✔ Success para operaciones exitosas
-
-✔ Error para fallos
-
-✔ Confirm antes de eliminar datos
-
-✔ Mensajes cortos y claros
-
-✔ No abusar de los toasts
-
-✔ Mantener consistencia visual
-
-> [!TIP]
-> Una notificación efectiva comunica información útil sin interrumpir innecesariamente al usuario.
-
----
-
-# 📘 🟠 UX Y FREEALERTS
-
-## 🧠 Una buena notificación debe:
-
-✔ Ser clara
-
-✔ Ser breve
-
-✔ Explicar qué ocurrió
-
-✔ Indicar qué hacer después
-
-👉 Las notificaciones son parte importante de la experiencia de usuario.
-
----
-
-# 📘 🔴 LICENCIA
-
-## 📄 MIT
-
-👉 Uso libre para proyectos personales y comerciales.
-
----
-
-# ⚠️ COSAS IMPORTANTES
-
-> [!IMPORTANT]
-> No tiene dependencias.
-
-> [!IMPORTANT]
-> `confirm()` devuelve `Promise<boolean>`.
-
-> [!IMPORTANT]
-> Compatible con cualquier framework.
-
-> [!IMPORTANT]
-> Se personaliza con CSS.
-
-> [!IMPORTANT]
-> Diseñada para mejorar UX.
-
----
-
-# ✨ RESUMEN
-
-> [!NOTE]
-> FreeAlerts = sistema de notificaciones ligero.
-
----
-
-## 🚀 Métodos principales
-
-👉 `toast()` → mensajes rápidos
-
-👉 `success()` → éxito
-
-👉 `error()` → errores
-
-👉 `warning()` → advertencias
-
-👉 `info()` → información
-
-👉 `alert()` → modal informativo
-
-👉 `confirm()` → confirmación
-
----
-
-> [!TIP]
-> Una librería simple, moderna y flexible para dar feedback visual al usuario 🚀
+This project is intended for educational purposes and is part of a personal portfolio.
