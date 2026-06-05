@@ -5,26 +5,18 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=000&style=flat" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Vite-Build-646CFF?logo=vite&logoColor=white&style=flat" alt="Vite" />
-  <img src="https://img.shields.io/badge/CSS3-Styled-blue?logo=css3&logoColor=white&style=flat" alt="CSS3" />
-  <img src="https://img.shields.io/badge/Zero-Dependencies-success?style=flat" alt="Zero Dependencies" />
-  <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=flat" alt="Status Completed" />
+  <img src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=000&style=flat" />
+  <img src="https://img.shields.io/badge/Vite-Build-646CFF?logo=vite&logoColor=white&style=flat" />
+  <img src="https://img.shields.io/badge/CSS3-Styled-blue?logo=css3&logoColor=white&style=flat" />
+  <img src="https://img.shields.io/badge/Zero_Dependencies-Yes-success?style=flat" />
+  <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=flat" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/alobuuls/free-alerts" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-Repository-black?logo=github" alt="Github Repository"/>
-  </a>
-  <a href="https://www.npmjs.com/package/free-alerts" target="_blank">
-    <img src="https://img.shields.io/badge/NPM-Package-CB3837?logo=npm&logoColor=white" alt="NPM Package"/>
-  </a>
-  <a href="https://github.com/alobuuls/free-alerts/stargazers" target="_blank">
-    <img src="https://img.shields.io/github/stars/alobuuls/free-alerts?style=social" alt="Github Stars"/>
-  </a>
-  <a href="https://github.com/alobuuls/free-alerts/commits/main" target="_blank">
-    <img src="https://img.shields.io/github/last-commit/alobuuls/free-alerts" alt="Last Commit" />
-  </a>
+  <a href="https://github.com/alobuuls/free-alerts"><img src="https://img.shields.io/badge/GitHub-Repository-black?logo=github&style=flat" /></a>
+  <a href="https://www.npmjs.com/package/free-alerts"><img src="https://img.shields.io/badge/NPM-Package-CB3837?logo=npm&logoColor=white&style=flat" /></a>
+  <a href="https://github.com/alobuuls/free-alerts/stargazers"><img src="https://img.shields.io/github/stars/alobuuls/free-alerts?style=flat" /></a>
+  <a href="https://github.com/alobuuls/free-alerts/commits/main"><img src="https://img.shields.io/github/last-commit/alobuuls/free-alerts/main?style=flat" /></a>
 </p>
 
 ---
@@ -49,17 +41,17 @@
     - [Example](#example)
   - [📚 API Reference](#-api-reference)
 - [🔔 Toast Methods](#-toast-methods)
-  - [Parameters](#parameters)
-  - [Success](#success)
-  - [Error](#error)
-  - [Warning](#warning)
-  - [Info](#info)
-  - [Custom Duration](#custom-duration)
+  - [🧩 Parameters](#-parameters)
+  - [🟢 Success](#-success)
+  - [🔴 Error](#-error)
+  - [🟡 Warning](#-warning)
+  - [🔵 Info](#-info)
+  - [⏱️ Custom Duration](#️-custom-duration)
 - [📢 Alert Method](#-alert-method)
-  - [Parameters](#parameters-1)
+  - [🧩 Parameters](#-parameters-1)
   - [Example](#example-1)
 - [❓ Confirm Method](#-confirm-method)
-  - [Parameters](#parameters-2)
+  - [Parameters](#parameters)
   - [Return Type](#return-type)
   - [Example](#example-2)
   - [💡 Usage Examples](#-usage-examples)
@@ -68,6 +60,11 @@
     - [Delete Confirmation](#delete-confirmation)
   - [⚛️ React Example](#️-react-example)
   - [🅰️ Angular Example](#️-angular-example)
+  - [🧩 Option 1 — Using `@ts-ignore`](#-option-1--using-ts-ignore)
+  - [🧩 Option 2 — Recommended (Type Declarations)](#-option-2--recommended-type-declarations)
+    - [📝 Type Setup](#-type-setup)
+    - [⚡ Angular Usage](#-angular-usage)
+    - [💡 Notes](#-notes)
   - [💚 Vue Example](#-vue-example)
   - [🧪 Testing](#-testing)
     - [Run Tests](#run-tests)
@@ -88,15 +85,21 @@
 
 ### 🚀 Demo
 
-https://alobuuls.github.io/free-alerts/demo/prod/
+<a href="https://alobuuls.github.io/free-alerts/demo/prod/" target="_blank" rel="noopener noreferrer">
+  Open Demo
+</a>
 
 ### 📦 NPM Package
 
-https://www.npmjs.com/package/free-alerts
+<a href="https://www.npmjs.com/package/free-alerts" target="_blank" rel="noopener noreferrer">
+  View on NPM
+</a>
 
 ### 💻 Repository
 
-https://github.com/alobuuls/free-alerts
+<a href="https://github.com/alobuuls/free-alerts" target="_blank" rel="noopener noreferrer">
+  GitHub Repository
+</a>
 
 ---
 
@@ -176,10 +179,10 @@ FreeAlerts.success('Operation completed successfully');
 ### Example
 
 ```html
-<button id="success">Show Toast</button>
+<button id="btn">Show Toast</button>
 
 <script>
-  document.getElementById('success').addEventListener('click', () => {
+  document.getElementById('btn').addEventListener('click', () => {
     FreeAlerts.success('Hello World!');
   });
 </script>
@@ -189,14 +192,14 @@ FreeAlerts.success('Operation completed successfully');
 
 ## 📚 API Reference
 
-| Method                      | Description              |
-| --------------------------- | ------------------------ |
-| `success(message, options)` | Success notification     |
-| `error(message, options)`   | Error notification       |
-| `warning(message, options)` | Warning notification     |
-| `info(message, options)`    | Information notification |
-| `alert(options)`            | Informational modal      |
-| `confirm(options)`          | Confirmation modal       |
+| Method                      | Description                     |
+| --------------------------- | ------------------------------- |
+| `success(message, options)` | 🟢 Shows a success notification |
+| `error(message, options)`   | 🔴 Shows an error notification  |
+| `warning(message, options)` | 🟡 Shows a warning notification |
+| `info(message, options)`    | 🔵 Shows an info notification   |
+| `alert(options)`            | 🪟 Opens an informational modal |
+| `confirm(options)`          | ❓ Opens a confirmation modal   |
 
 ---
 
@@ -213,7 +216,7 @@ FreeAlerts.info();
 
 ---
 
-### Parameters
+### 🧩 Parameters
 
 ```ts
 message: string
@@ -225,7 +228,7 @@ options?: {
 
 ---
 
-### Success
+### 🟢 Success
 
 ```js
 FreeAlerts.success('User created successfully');
@@ -233,7 +236,7 @@ FreeAlerts.success('User created successfully');
 
 ---
 
-### Error
+### 🔴 Error
 
 ```js
 FreeAlerts.error('Unexpected error occurred');
@@ -241,7 +244,7 @@ FreeAlerts.error('Unexpected error occurred');
 
 ---
 
-### Warning
+### 🟡 Warning
 
 ```js
 FreeAlerts.warning('Please complete all fields');
@@ -249,7 +252,7 @@ FreeAlerts.warning('Please complete all fields');
 
 ---
 
-### Info
+### 🔵 Info
 
 ```js
 FreeAlerts.info('New version available');
@@ -257,7 +260,7 @@ FreeAlerts.info('New version available');
 
 ---
 
-### Custom Duration
+### ⏱️ Custom Duration
 
 ```js
 FreeAlerts.success('Saved correctly', {
@@ -271,7 +274,7 @@ FreeAlerts.success('Saved correctly', {
 
 Displays an informational modal dialog.
 
-### Parameters
+### 🧩 Parameters
 
 ```ts
 {
@@ -336,7 +339,7 @@ if (confirmed) {
 ### Form Submission
 
 ```js
-form.addEventListener('submit', () => {
+document.getElementById('form').addEventListener('submit', () => {
   FreeAlerts.success('Form submitted successfully');
 });
 ```
@@ -391,22 +394,86 @@ export default App;
 
 ## 🅰️ Angular Example
 
+There are **two ways** to use FreeAlerts in Angular depending on TypeScript configuration.
+
+---
+
+## 🧩 Option 1 — Using `@ts-ignore`
+
 ```ts
+import { Component } from '@angular/core';
+
+// @ts-ignore
 import FreeAlerts from 'free-alerts';
+
+// @ts-ignore
 import 'free-alerts/style';
 
 @Component({
   selector: 'app-root',
-  template: ` <button (click)="notify()">Notify</button> `,
+  template: '<button (click)="showAlert()">Show alert</button>',
 })
 export class AppComponent {
-  notify() {
-    FreeAlerts.success('Saved from Angular');
+  showAlert(): void {
+    FreeAlerts.success('test');
   }
 }
 ```
 
 ---
+
+## 🧩 Option 2 — Recommended (Type Declarations)
+
+### 📝 Type Setup
+
+Create the TypeScript declaration file:
+
+```text
+src/types/free-alerts.d.ts
+```
+
+```ts
+// This is for the FreeAlerts  ↓
+declare module 'free-alerts' {
+  const FreeAlerts: {
+    success(message: string, options?: Record<string, any>): void;
+    error(message: string, options?: Record<string, any>): void;
+    warning(message: string, options?: Record<string, any>): void;
+    info(message: string, options?: Record<string, any>): void;
+    alert(options: { title?: string; message?: string }): void;
+    confirm(options: { title?: string; message?: string }): Promise<boolean>;
+  };
+  export default FreeAlerts;
+}
+
+// This is for the styles  ↓
+declare module 'free-alerts/style';
+```
+
+### ⚡ Angular Usage
+
+```ts
+import { Component } from '@angular/core';
+
+//  Imports here ↓
+import FreeAlerts from 'free-alerts';
+import 'free-alerts/style';
+
+@Component({
+  selector: 'app-root',
+  template: '<button (click)="showAlert()">Show alert</button>',
+})
+export class AppComponent {
+  showAlert(): void {
+    FreeAlerts.success('test');
+  }
+}
+```
+
+### 💡 Notes
+
+- No `@ts-ignore` needed when using `.d.ts` files
+- Keeps Angular clean and fully typed
 
 ## 💚 Vue Example
 
@@ -465,21 +532,50 @@ describe('FreeAlerts.alert', () => {
 
 ```text
 free-alerts/
+├── demo/
+│   ├── dev/
+│   │   ├── app.js
+│   │   ├── index.html
+│   │   └── styles.css
+│   └── prod/
+│       ├── app.js
+│       ├── index.html
+│       └── styles.css
+│
+├── dist/
+│   ├── free-alerts.css
+│   ├── free-alerts.mjs
+│   └── free-alerts.umd.js
+│
 ├── src/
+│   ├── assets/
+│   │   └── preview.png
+│   │
 │   ├── core/
 │   │   ├── alert.js
 │   │   ├── confirm.js
 │   │   ├── createElement.js
 │   │   └── toast.js
+│   │
 │   ├── styles/
 │   │   └── free-alerts.css
+│   │
 │   ├── utils/
 │   │   ├── constants.js
 │   │   └── icons.js
+│   │
 │   └── index.js
+│
 ├── tests/
+│   ├── alert.test.js
+│   ├── confirm.test.js
+│   └── setup.js
+│
 ├── package.json
+├── package-lock.json
 ├── vite.config.js
+├── vitest.config.js
+├── LICENSE
 └── README.md
 ```
 

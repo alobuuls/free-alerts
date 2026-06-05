@@ -1,0 +1,110 @@
+{
+	// ---------- FORMATO Y PRETTIER ----------
+
+	// Prettier será el formateador por defecto
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+
+	// Formatea automáticamente al guardar el archivo
+	"editor.formatOnSave": true,
+
+	// Formateo al pegar código
+	"editor.formatOnPaste": false,
+
+	// Formateo mientras escribes (tipo auto-complete)
+	"editor.formatOnType": false,
+
+	// Configuración por lenguaje
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+
+	// ---------- ESLINT ----------
+
+	// Ejecuta ESLint para corregir errores automáticamente al guardar
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "always"
+	},
+
+	// ---------- ARCHIVOS ----------
+
+	// Quita espacios al final de cada línea
+	"files.trimTrailingWhitespace": true,
+
+	// Inserta una línea al final del archivo
+	"files.insertFinalNewline": true,
+
+	// Quita líneas finales extra
+	"files.trimFinalNewlines": true,
+
+	// ---------- EDITOR ----------
+
+	// Número de espacios por tabulación (solo si useTabs=false)
+	"editor.tabSize": 2,
+
+	// Muestra los pares de corchetes con colores
+	"editor.bracketPairColorization.enabled": true,
+
+	// Animación del cursor
+	"editor.cursorBlinking": "expand",
+
+	// Resalta el bloque de código correspondiente al corchete actual
+	"editor.guides.bracketPairs": true,
+
+	// Permite edición vinculada (renombrar variable renombra todas)
+	"editor.linkedEditing": true,
+
+	// Suaviza el movimiento del cursor
+	"editor.cursorSmoothCaretAnimation": "on",
+
+	// ---------- TERMINAL ----------
+
+	// Terminal por defecto
+	"terminal.integrated.defaultProfile.windows": "Git Bash",
+
+	// Permite negritas en terminal
+	"terminal.integrated.fontWeightBold": "bold",
+
+	// Permite ligaduras en la terminal
+	"terminal.integrated.fontLigatures.enabled": true,
+
+	// Definición de perfiles de terminal
+	"terminal.integrated.profiles.windows": {
+		"PowerShell": {
+			"source": "PowerShell",
+			"icon": "terminal-powershell"
+		},
+		"Command Prompt": {
+			"path": ["${env:windir}\\Sysnative\\cmd.exe", "${env:windir}\\System32\\cmd.exe"],
+			"args": [],
+			"icon": "terminal-cmd"
+		},
+		"Git Bash": {
+			"path": "C:\\Program Files\\Git\\bin\\bash.exe",
+			"args": ["--login", "-i"]
+		}
+	},
+
+	// ---------- GIT ----------
+
+	// Desactiva confirmación de sincronización
+	"git.confirmSync": false,
+
+	// Permite que VS Code actualice imports automáticamente al mover archivos
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"js/ts.updateImportsOnFileMove.enabled": "always",
+
+	// ---------- LIVE SERVER ----------
+
+	// No mostrar mensajes de información
+	"liveServer.settings.donotShowInfoMsg": true,
+	"liveServer.settings.donotVerifyTags": true
+}
