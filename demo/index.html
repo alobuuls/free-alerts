@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demo FreeAlerts</title>
+
+    <!-- Font Awesome para iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Estilos de la demo -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main>
+      <ul id="ctn-btns">
+        <li>
+          <button id="success">success</button>
+          <div class="icon-box"><i class="fa fa-check"></i></div>
+        </li>
+        <li>
+          <button id="info">info</button>
+          <div class="icon-box"><i class="fa fa-info"></i></div>
+        </li>
+        <li>
+          <button id="warning">warning</button>
+          <div class="icon-box"><i class="fa fa-warning"></i></div>
+        </li>
+        <li>
+          <button id="error">error</button>
+          <div class="icon-box"><i class="fa fa-times"></i></div>
+        </li>
+        <li>
+          <button id="alert">alert</button>
+          <div class="icon-box"><i class="fa fa-square"></i></div>
+        </li>
+        <li>
+          <button id="confirm">confirm</button>
+          <div class="icon-box"><i class="fa fa-question"></i></div>
+        </li>
+      </ul>
+
+      <!-- Contenedor para mostrar resultados de confirm -->
+      <div id="result"></div>
+    </main>
+
+    <!-- Script de la demo -->
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

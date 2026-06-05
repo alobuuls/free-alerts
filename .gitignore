@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor folders
+.vscode/
+.idea/
+
+# Environment files
+.env
+
+# Build output
+# NO ignorar dist si quieres subirlo al repo o publicarlo
+# Ignorar otros builds temporales
+build/
+coverage/
+tmp/

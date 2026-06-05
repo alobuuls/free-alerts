@@ -1,0 +1,47 @@
+{
+  "name": "free-alerts",
+  "version": "1.0.0",
+  "description": "Librería de alertas, toasts y confirmaciones para JavaScript.",
+  "keywords": [
+    "toast",
+    "alerts",
+    "notifications",
+    "ui",
+    "javascript",
+    "free-alerts"
+  ],
+  "author": "Alondra Francisco",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alobuuls/free-alerts.git"
+  },
+  "homepage": "https://alobuuls.github.io/free-alerts/demo/index.html",
+  "bugs": {
+    "url": "https://github.com/alobuuls/free-alerts/issues"
+  },
+  "main": "dist/free-alerts.umd.js",
+  "module": "dist/free-alerts.mjs",
+  "style": "dist/free-alerts.css",
+  "exports": {
+    ".": {
+      "import": "./dist/free-alerts.mjs",
+      "require": "./dist/free-alerts.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest",
+    "test:ui": "vitest --ui"
+  },
+  "devDependencies": {
+    "@vitest/ui": "^4.1.8",
+    "jsdom": "^29.1.1",
+    "vite": "^8.0.16",
+    "vitest": "^4.1.8"
+  }
+}
