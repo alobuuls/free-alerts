@@ -31,7 +31,8 @@
     "./style": "./dist/free-alerts.css"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "dev": "vite",
