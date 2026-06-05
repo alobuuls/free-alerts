@@ -1,4 +1,4 @@
-import FreeAlerts from '@/index.js';
+import FreeAlerts from '../src/index.js';
 
 // Selector rápido
 const $ = el => document.getElementById(el);
