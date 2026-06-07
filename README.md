@@ -633,4 +633,6 @@ If you find bugs, have ideas for improvements, or want to contribute new feature
 
 ## 📄 License
 
-This project is intended for educational purposes and is part of a personal portfolio.
+This project is intended for educational and portfolio purposes.
+
+Created by **Alondra Francisco**.
